@@ -1,8 +1,8 @@
 describe('Покупка аватара', function () {                                // название набора тестов
     it('e2e тест на покупку нового аватара для тренера', function () {   // название теста
          cy.visit('https://pokemonbattle.ru/');                          // переходим на сайт https://pokemonbattle.ru/
-         cy.get(':nth-child(1) > .auth__input').type('almasterowa@yandex.ru');                   // вводим логин
-         cy.get('#password').type('Alyona9036638391');               // вводим пароль
+         cy.get(':nth-child(1) > .auth__input').type('USER_LOGIN');                   // вводим логин
+         cy.get('#password').type('USER_PASSWORD');               // вводим пароль
          cy.get('.auth__button').click();                        // нажимаем кнопку Войти
          cy.wait(2000);
          cy.get('.header__container > .header__id').click({ force: true }); // Клик в шапке на аву тренера
